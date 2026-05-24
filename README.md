@@ -1,10 +1,10 @@
 # Planto. - Breath Natural
 
-Plant decor storefront built from the Planto Figma concept, with a React frontend and a small API layer for plant data and newsletter subscriptions.
+Plant decor storefront with a React frontend and a small API layer for plant data and newsletter subscriptions.
 
 ## Live Demo
 
-Add the deployed URL after publishing, for example: `https://breath-natural.vercel.app`
+https://breath-natural-beryl.vercel.app/
 
 ## Tech Stack
 
@@ -16,40 +16,17 @@ Add the deployed URL after publishing, for example: `https://breath-natural.verc
 
 ## Run Locally
 
-```bash
 npm install
 npm run dev
-```
-
-The app runs at `http://localhost:5173`. The same server handles:
-
-- `GET /api/plants`
-- `POST /api/subscribe`
-
-## Production Preview
-
-```bash
-npm run preview
-```
-
-## Deployment
-
-Vercel can deploy the Vite frontend and the `/api` serverless functions from this repo.
-
-1. Push this project to GitHub.
-2. Import the repo in Vercel.
-3. Keep the build command as `npm run build`.
-4. Keep the output directory as `dist`.
-5. Use Node.js `22.x` if Vercel asks for a Node version.
 
 ## Folder Structure
 
-```text
+
 api/            Vercel serverless functions
 server/         Express API for local full-stack development
 src/api/        Frontend API helpers
 src/components/ One JSX + CSS file per section
 src/data/       Frontend fallback content
 src/styles/     Global design tokens and reset
-```
+
 # breath-natural
