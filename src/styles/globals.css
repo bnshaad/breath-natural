@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap');
+
+/* ─── CSS Custom Properties ───────────────────────────────── */
+:root {
+  /* Colors from Figma */
+  --green-dark:   #1B4332;
+  --green-mid:    #2D6A4F;
+  --green-light:  #52B788;
+  --green-pale:   #D8F3DC;
+  --green-hero:   #B7E4C7;
+  --bg-main:      #FAFAF5;
+  --bg-card:      #FFFFFF;
+  --bg-section:   #F4F4EE;
+  --text-dark:    #1A1A1A;
+  --text-body:    #4A4A4A;
+  --text-muted:   #888888;
+  --text-white:   #FFFFFF;
+  --border:       #E8E8E0;
+  --star:         #F4A01C;
+  --price-green:  #2D6A4F;
+
+  --font: 'Poppins', sans-serif;
+
+  --radius-pill:  100px;
+  --radius-card:  24px;
+  --radius-card-top: 56px;
+  --nav-h:        80px;
+  --max-w:        1200px;
+
+  --shadow-card:  0 4px 24px rgba(27,67,50,0.10);
+  --shadow-btn:   0 4px 16px rgba(27,67,50,0.25);
+  --trans:        0.28s ease;
+}
+
+/* ─── Reset ────────────────────────────────────────────────── */
+*,*::before,*::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; font-size: 16px; }
+body { font-family: var(--font); background: var(--bg-main); color: var(--text-dark); -webkit-font-smoothing: antialiased; }
+a { text-decoration: none; color: inherit; }
+button { font-family: var(--font); cursor: pointer; border: none; outline: none; background: none; }
+img { max-width: 100%; display: block; }
+ul { list-style: none; }
+
+/* ─── Layout Helpers ───────────────────────────────────────── */
+.container {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+/* ─── Shared Button Styles ─────────────────────────────────── */
+.btn-dark {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--green-dark);
+  color: var(--text-white);
+  font-size: 0.88rem;
+  font-weight: 500;
+  padding: 12px 28px;
+  border-radius: var(--radius-pill);
+  transition: background var(--trans), transform var(--trans), box-shadow var(--trans);
+}
+.btn-dark:hover { background: var(--green-mid); transform: translateY(-2px); box-shadow: var(--shadow-btn); }
+
+.btn-outline-dark {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: transparent;
+  color: var(--green-dark);
+  font-size: 0.88rem;
+  font-weight: 500;
+  padding: 11px 28px;
+  border-radius: var(--radius-pill);
+  border: 1.5px solid var(--green-dark);
+  transition: all var(--trans);
+}
+.btn-outline-dark:hover { background: var(--green-dark); color: var(--text-white); }
+
+/* ─── Section Title ─────────────────────────────────────────── */
+.section-heading {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  line-height: 1.2;
+}
+
+.toast {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  z-index: 200;
+  max-width: min(320px, calc(100vw - 48px));
+  padding: 14px 18px;
+  border-radius: 14px;
+  background: var(--green-dark);
+  color: var(--text-white);
+  font-size: 0.88rem;
+  font-weight: 600;
+  box-shadow: var(--shadow-btn);
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(14px);
+  transition: opacity var(--trans), transform var(--trans);
+}
+.toast--visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (max-width: 768px) {
+  .container { padding: 0 20px; }
+  .section-heading { font-size: 1.7rem; }
+  .toast {
+    right: 16px;
+    bottom: 16px;
+    max-width: calc(100vw - 32px);
+  }
+}

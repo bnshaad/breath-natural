@@ -38,8 +38,9 @@ Vercel can deploy the Vite frontend and the `/api` serverless functions from thi
 
 1. Push this project to GitHub.
 2. Import the repo in Vercel.
-3. Use the default Vite build command: `npm run build`.
-4. Use the default output directory: `dist`.
+3. Keep the build command as `npm run build`.
+4. Keep the output directory as `dist`.
+5. Use Node.js `22.x` if Vercel asks for a Node version.
 
 ## Folder Structure
 

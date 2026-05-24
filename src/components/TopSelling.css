@@ -1,0 +1,107 @@
+.top-selling {
+  padding: 90px 0;
+  background: var(--bg-section);
+}
+
+.top-selling__heading {
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.top-selling__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+/* ── Card ── */
+.top-card {
+  background: var(--bg-card);
+  border-radius: var(--radius-card);
+  overflow: hidden;
+  box-shadow: var(--shadow-card);
+  transition: transform var(--trans), box-shadow var(--trans);
+}
+.top-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 36px rgba(27,67,50,0.14);
+}
+
+.top-card__img-wrap {
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.top-card__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+.top-card:hover .top-card__img { transform: scale(1.05); }
+
+/* Concave top body */
+.top-card__body {
+  padding: 20px;
+  border-radius: 40px 40px 0 0;
+  margin-top: -28px;
+  position: relative;
+  z-index: 1;
+  background: var(--bg-card);
+}
+
+.top-card__name {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: 6px;
+}
+
+.top-card__desc {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+  margin-bottom: 14px;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.top-card__footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.top-card__price {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--green-dark);
+}
+
+.top-card__bag-btn {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--green-dark);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background var(--trans), transform var(--trans);
+}
+.top-card__bag-btn:hover {
+  background: var(--green-mid);
+  transform: scale(1.1);
+}
+
+@media (max-width: 900px) {
+  .top-selling__grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 560px) {
+  .top-selling__grid { grid-template-columns: 1fr; }
+  .top-card__img-wrap { height: 180px; }
+}

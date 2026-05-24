@@ -1,0 +1,131 @@
+.trendy {
+  padding: 90px 0;
+  background: var(--bg-main);
+}
+
+.trendy__heading {
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.trendy__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 28px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* ── Card ── */
+.trendy-card {
+  background: var(--bg-card);
+  border-radius: var(--radius-card);
+  overflow: hidden;
+  box-shadow: var(--shadow-card);
+  transition: transform var(--trans), box-shadow var(--trans);
+}
+.trendy-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 40px rgba(27,67,50,0.15);
+}
+
+/* Image wrap */
+.trendy-card__img-wrap {
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+}
+.trendy-card__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+.trendy-card:hover .trendy-card__img {
+  transform: scale(1.05);
+}
+
+/* Body with concave-top effect */
+.trendy-card__body {
+  padding: 24px;
+  background: var(--bg-card);
+  /* The concave top shape from Figma comment: border-radius: 56px */
+  border-radius: 56px 56px 0 0;
+  margin-top: -40px;
+  position: relative;
+  z-index: 1;
+}
+
+.trendy-card__name {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: 10px;
+}
+
+.trendy-card__desc {
+  font-size: 0.83rem;
+  color: var(--text-muted);
+  line-height: 1.7;
+  margin-bottom: 18px;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.trendy-card__footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.trendy-card__price {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--green-dark);
+}
+
+.trendy-card__actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.trendy-card__explore-btn {
+  background: var(--green-pale);
+  color: var(--green-dark);
+  font-size: 0.82rem;
+  font-weight: 600;
+  padding: 8px 20px;
+  border-radius: var(--radius-pill);
+  transition: all var(--trans);
+}
+.trendy-card__explore-btn:hover {
+  background: var(--green-dark);
+  color: #fff;
+}
+
+.trendy-card__bag-btn {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: var(--green-dark);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background var(--trans), transform var(--trans);
+}
+.trendy-card__bag-btn:hover {
+  background: var(--green-mid);
+  transform: scale(1.1);
+}
+
+@media (max-width: 640px) {
+  .trendy__grid { grid-template-columns: 1fr; }
+  .trendy-card__img-wrap { height: 240px; }
+}
