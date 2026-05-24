@@ -47,8 +47,7 @@ export default function Footer() {
               Planto.
             </a>
             <p className="footer__tagline">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-              incididunt ut labore et dolore magna aliqua.
+              Curated indoor plants, simple care tips, and fresh greenery for peaceful homes.
             </p>
             <div className="footer__socials">
               {["FB", "TW", "Li"].map((s) => (
@@ -61,7 +60,7 @@ export default function Footer() {
           <div className="footer__col">
             <h4 className="footer__col-title">Quick Links</h4>
             <ul className="footer__links">
-              {["Home", "Type's of Plants", "Contact", "Privacy"].map((l) => (
+              {["Home", "Types of Plants", "Contact", "Privacy"].map((l) => (
                 <li key={l}><a href="#" className="footer__link">{l}</a></li>
               ))}
             </ul>
@@ -91,7 +90,7 @@ export default function Footer() {
         </div>
 
         <div className="footer__bottom">
-          <p>planto © all right reserve</p>
+          <p>planto © all rights reserved</p>
         </div>
       </div>
     </footer>

@@ -10,10 +10,10 @@ export default function Hero({ onBuyNow }) {
 
         {/* ── Left Content ── */}
         <div className="hero__content">
-          <h1 className="hero__title">Breath<br />Natureal</h1>
+          <h1 className="hero__title">Breath<br />Natural</h1>
           <p className="hero__desc">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-            incididunt ut labore et dolore magna aliqua.
+            Bring home fresh indoor plants that make every corner feel calmer,
+            cleaner, and closer to nature.
           </p>
 
           <div className="hero__actions">
@@ -48,10 +48,10 @@ export default function Hero({ onBuyNow }) {
                 className="hero__review-avatar"
               />
               <div>
-                <p className="hero__review-author-name">alena Patel</p>
+                <p className="hero__review-author-name">Alena Patel</p>
                 <div className="hero__stars">★★★★<span>★</span></div>
               </div>
-              <p className="hero__review-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt...</p>
+              <p className="hero__review-text">The plant arrived healthy, fresh, and perfectly packed for my living room.</p>
             </div>
           </div>
         </div>
