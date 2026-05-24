@@ -1,32 +1,66 @@
-# Planto. - Breath Natural
+# Planto. - Breath Natural 🌿
 
-Plant decor storefront with a React frontend and a small API layer for plant data and newsletter subscriptions.
+A modern plant decor storefront built with React and Vite. Clean UI, responsive layout, and a lightweight API setup for local and production environments. Humanity really looked at plants and decided they also needed branding.
 
 ## Live Demo
 
 https://breath-natural-beryl.vercel.app/
 
+---
+
 ## Tech Stack
 
-- React 19 + Vite
-- Express API for local full-stack development
-- Vercel serverless API routes for deployment
-- CSS custom properties and component CSS
+- React 19
+- Vite
+- Express.js
+- Vercel Serverless Functions
+- CSS
 - Google Fonts (Poppins)
+
+---
 
 ## Run Locally
 
+```bash
 npm install
 npm run dev
+```
 
-## Folder Structure
+---
 
+## Project Structure
 
-api/            Vercel serverless functions
-server/         Express API for local full-stack development
-src/api/        Frontend API helpers
-src/components/ One JSX + CSS file per section
-src/data/       Frontend fallback content
-src/styles/     Global design tokens and reset
+```bash
+api/             # Vercel serverless functions
+server/          # Express API for local development
+src/api/         # Frontend API helpers
+src/components/  # UI components
+src/data/        # Static/fallback data
+src/styles/      # Global styles
+```
 
-# breath-natural
+---
+
+## Features
+
+- Responsive modern UI
+- Plant showcase sections
+- Newsletter subscription
+- Local + serverless API support
+- Reusable component structure
+
+---
+
+## Deployment
+
+Optimized for Vercel deployment.
+
+```bash
+vercel
+```
+
+---
+
+## Author
+
+Built by Binshad
